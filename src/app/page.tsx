@@ -81,7 +81,7 @@ export default function HomePage() {
           />
 
           {/* Movie Categories */}
-          <div className="relative -mt-32 z-10 pb-12">
+          <div className="relative -mt-16 z-10 pb-12">
             {categories.map((category) => (
               <MovieRow
                 key={category.title}

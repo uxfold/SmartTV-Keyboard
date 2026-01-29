@@ -32,7 +32,7 @@ export function HeroBanner({ movie, onPlay, onMoreInfo }: HeroBannerProps) {
   const posterUrl = movie.Poster !== 'N/A' ? movie.Poster : null;
 
   return (
-    <div className="relative w-full h-[600px] overflow-hidden">
+    <div className="relative w-full h-[420px] overflow-hidden">
       {/* Background Image */}
       {posterUrl && (
         <div className="absolute inset-0">
@@ -47,37 +47,37 @@ export function HeroBanner({ movie, onPlay, onMoreInfo }: HeroBannerProps) {
       )}
 
       {/* Gradient Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/50" />
 
       {/* Content */}
       <div className="absolute inset-0 flex items-center">
-        <div className="px-12 max-w-2xl">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
+        <div className="px-12 max-w-xl">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-lg">
             {movie.Title}
           </h1>
-          <p className="text-xl text-gray-300 mb-2">
+          <p className="text-base text-gray-300 mb-1">
             {movie.Year} • {movie.Type}
           </p>
-          <p className="text-lg text-gray-400 mb-8 line-clamp-3">
+          <p className="text-sm text-gray-400 mb-5 line-clamp-2">
             Discover this amazing title and explore more content in our library.
           </p>
 
           {/* Action Buttons */}
-          <div className="flex gap-4">
+          <div className="flex gap-3">
             <button
               ref={playRef}
               onClick={onPlay}
               className={`
-                flex items-center gap-2 px-8 py-4 rounded-lg
-                text-xl font-semibold transition-all duration-200
+                flex items-center gap-2 px-5 py-2.5 rounded-md
+                text-base font-semibold transition-all duration-200
                 ${playFocused
                   ? 'bg-white text-black scale-105'
                   : 'bg-white/90 text-black hover:bg-white'
                 }
               `}
             >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z" />
               </svg>
               Play
@@ -87,15 +87,15 @@ export function HeroBanner({ movie, onPlay, onMoreInfo }: HeroBannerProps) {
               ref={infoRef}
               onClick={onMoreInfo}
               className={`
-                flex items-center gap-2 px-8 py-4 rounded-lg
-                text-xl font-semibold transition-all duration-200
+                flex items-center gap-2 px-5 py-2.5 rounded-md
+                text-base font-semibold transition-all duration-200
                 ${infoFocused
                   ? 'bg-gray-300 text-black scale-105'
                   : 'bg-gray-500/70 text-white hover:bg-gray-500'
                 }
               `}
             >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
               </svg>
               More Info
@@ -104,10 +104,10 @@ export function HeroBanner({ movie, onPlay, onMoreInfo }: HeroBannerProps) {
         </div>
       </div>
 
-      {/* Poster on right side */}
+      {/* Poster on right side - smaller */}
       {posterUrl && (
         <div className="absolute right-12 top-1/2 -translate-y-1/2 hidden lg:block">
-          <div className="w-[300px] h-[450px] rounded-lg overflow-hidden shadow-2xl ring-2 ring-white/20">
+          <div className="w-[180px] h-[270px] rounded-lg overflow-hidden shadow-2xl ring-2 ring-white/20">
             <Image
               src={posterUrl}
               alt={movie.Title}

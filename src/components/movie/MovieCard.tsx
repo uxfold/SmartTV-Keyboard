@@ -11,9 +11,9 @@ interface MovieCardProps {
 }
 
 const sizeClasses = {
-  small: 'w-[150px] h-[225px]',
-  medium: 'w-[200px] h-[300px]',
-  large: 'w-[250px] h-[375px]',
+  small: 'w-[140px] h-[210px]',
+  medium: 'w-[160px] h-[240px]',
+  large: 'w-[200px] h-[300px]',
 };
 
 export function MovieCard({ movie, onSelect, size = 'medium' }: MovieCardProps) {
@@ -59,11 +59,11 @@ export function MovieCard({ movie, onSelect, size = 'medium' }: MovieCardProps) 
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
       {/* Title and year */}
-      <div className="absolute bottom-0 left-0 right-0 p-3">
-        <h3 className={`font-bold text-white line-clamp-2 ${size === 'small' ? 'text-sm' : 'text-base'}`}>
+      <div className="absolute bottom-0 left-0 right-0 p-2">
+        <h3 className={`font-semibold text-white line-clamp-2 ${size === 'small' ? 'text-[12px]' : 'text-[14px]'}`}>
           {movie.Title}
         </h3>
-        <p className="text-gray-300 text-sm">{movie.Year}</p>
+        <p className="text-gray-300 text-[12px]">{movie.Year}</p>
       </div>
 
       {/* Focus indicator */}

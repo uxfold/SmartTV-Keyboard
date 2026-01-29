@@ -37,8 +37,8 @@ export function MovieRow({ title, movies, onMovieSelect, isLoading }: MovieRowPr
 
   if (isLoading) {
     return (
-      <div className="mb-8" ref={scrollRef}>
-        <h2 className="text-2xl font-bold text-white mb-4 px-12">{title}</h2>
+      <div className="mb-6" ref={scrollRef}>
+        <h2 className="text-[24px] font-semibold text-white mb-3 px-12">{title}</h2>
         <div className="flex gap-4 px-12 overflow-x-hidden">
           {[1, 2, 3, 4, 5].map((i) => (
             <div
@@ -56,8 +56,8 @@ export function MovieRow({ title, movies, onMovieSelect, isLoading }: MovieRowPr
   }
 
   return (
-    <div className="mb-8" ref={scrollRef}>
-      <h2 className="text-2xl font-bold text-white mb-4 px-12">{title}</h2>
+    <div className="mb-6" ref={scrollRef}>
+      <h2 className="text-[24px] font-semibold text-white mb-3 px-12">{title}</h2>
       <FocusContext.Provider value={focusKey}>
         <div
           ref={ref}

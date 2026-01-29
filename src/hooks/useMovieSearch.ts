@@ -22,7 +22,10 @@ export function useMovieSearch(query: string, debounceMs: number = 500): UseMovi
 
   useEffect(() => {
     async function fetchMovies() {
-      if (!debouncedQuery.trim()) {
+      const trimmedQuery = debouncedQuery.trim();
+
+      // OMDB requires at least 3 characters to search
+      if (!trimmedQuery || trimmedQuery.length < 3) {
         setMovies([]);
         setTotalResults(0);
         setError(null);
@@ -33,7 +36,7 @@ export function useMovieSearch(query: string, debounceMs: number = 500): UseMovi
       setError(null);
 
       try {
-        const response = await searchMovies(debouncedQuery);
+        const response = await searchMovies(trimmedQuery);
 
         if (response.Response === 'True' && response.Search) {
           setMovies(response.Search);
@@ -41,7 +44,8 @@ export function useMovieSearch(query: string, debounceMs: number = 500): UseMovi
         } else {
           setMovies([]);
           setTotalResults(0);
-          if (response.Error && response.Error !== 'Movie not found!') {
+          // Don't show "Too many results" as an error
+          if (response.Error && response.Error !== 'Movie not found!' && response.Error !== 'Too many results.') {
             setError(response.Error);
           }
         }

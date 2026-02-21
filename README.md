@@ -7,7 +7,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.0-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
 
-![Smart TV Keyboard Demo](./docs/demo-screenshot.png)
+![Smart TV Keyboard Demo](https://smarttv.karandhimaan.com/)
 
 ---
 

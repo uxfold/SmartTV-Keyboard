@@ -2,13 +2,13 @@
 
 > A **TV-optimized text input system** with multi-tap predictive keyboard for Smart TV applications. Built for remote control, D-pad, and gamepad navigation.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-smarttv.karadhimaan.com-blue?style=for-the-badge)](https://smarttv.karadhimaan.com)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-smarttv.karandhimaan.com-blue?style=for-the-badge)](https://smarttv.karandhimaan.com)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.0-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
 
 <p align="center">
-  <a href="https://smarttv.karadhimaan.com">Live Demo</a></p>
+  <a href="https://smarttv.karandhimaan.com">Live Demo</a></p>
 
 ---
 
@@ -55,7 +55,7 @@ Classic phone-style text entry optimized for TV remotes:
 
 ## 🖥️ Live Demo
 
-**Try it now:** [smarttv.karadhimaan.com](https://smarttv.karadhimaan.com)
+**Try it now:** [smarttv.karandhimaan.com](https://smarttv.karandhimaan.com)
 
 Best experienced:
 - On a Smart TV browser
@@ -362,7 +362,7 @@ Senior Product Designer with 9+ years of experience specializing in AI/ML applic
 </p>
 
 <p align="center">
-  <a href="https://smarttv.karadhimaan.com">Live Demo</a> •
+  <a href="https://smarttv.karandhimaan.com">Live Demo</a> •
   <a href="https://github.com/uxfold/SmartTV-Keyboard/issues">Report Bug</a> •
   <a href="https://github.com/uxfold/SmartTV-Keyboard/issues">Request Feature</a>
 </p>
